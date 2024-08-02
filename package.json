@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "lint:check": "eslint --ext .ts src",
     "lint:fix": "eslint --fix",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "private": true,
   "dependencies": {
