@@ -1,0 +1,3 @@
+{ "*.ts": "eslint src",
+"src/**/*.{ts,css,html}": "prettier --check"
+ }

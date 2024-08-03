@@ -24,3 +24,16 @@ Prepare scrtipt is reposnsible for setup precommit hooks.
  * npm install 
  * npm run prepare
 
+ ## Roadmap
+
+  * Angular intit - done
+  * PrimeNg - done
+  * Github pipeline, npm run test, eslint, build before merge
+  * Demo module
+  * Routing
+  * Guard
+  * Resolver - example fake api call
+  * Guard  
+  * ENV variables
+  * Google Login Example
+
