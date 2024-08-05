@@ -8,6 +8,6 @@
   "trailingComma": "es5",
   "bracketSameLine": true,
   "printWidth": 100,
-  "plugins": ["prettier-plugin-organize-imports"],
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
   "endOfLine": "auto"
 }

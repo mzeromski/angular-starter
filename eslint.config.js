@@ -14,43 +14,42 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
-  
     ],
     processor: angular.processInlineTemplates,
     rules: {
       'prettier/prettier': ['error'],
-      "@typescript-eslint/no-non-null-assertion": "off",
+      '@typescript-eslint/no-non-null-assertion': 'off',
 
-"@typescript-eslint/explicit-function-return-type": "error",
-        "@typescript-eslint/prefer-as-const": "error",
-        "@typescript-eslint/typedef": [
-          "error",
-          {
-            "arrowParameter": false,
-            "variableDeclaration": true,
-            "memberVariableDeclaration": true,
-            "arrayDestructuring": false,
-            "objectDestructuring": false
-          }
-        ],
-        "@typescript-eslint/consistent-type-definitions": "off",
-        "@typescript-eslint/no-inferrable-types": "off",
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
-        ]
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/prefer-as-const': 'error',
+      '@typescript-eslint/typedef': [
+        'error',
+        {
+          arrowParameter: false,
+          variableDeclaration: true,
+          memberVariableDeclaration: true,
+          arrayDestructuring: false,
+          objectDestructuring: false,
+        },
+      ],
+      '@typescript-eslint/consistent-type-definitions': 'off',
+      '@typescript-eslint/no-inferrable-types': 'off',
+      '@angular-eslint/directive-selector': [
+        'error',
+        {
+          type: 'attribute',
+          prefix: 'app',
+          style: 'camelCase',
+        },
+      ],
+      '@angular-eslint/component-selector': [
+        'error',
+        {
+          type: 'element',
+          prefix: 'app',
+          style: 'kebab-case',
+        },
+      ],
     },
   },
   {
