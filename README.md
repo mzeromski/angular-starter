@@ -9,6 +9,7 @@ Already configured stack
 - prettier
 - primeng
 - tailwind
+- fontawesome
 
 Features
 
