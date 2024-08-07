@@ -1,0 +1,13 @@
+<div
+  class="flex size-8 cursor-pointer content-center justify-center rounded-full text-center text-black hover:bg-slate-500 dark:text-white">
+  <fa-icon
+    class="translate-y-1 dark:hidden"
+    [icon]="iconDark"
+    (click)="darkModeSwitchService.setDarkMode(true)"></fa-icon>
+
+  <fa-icon
+    class="hidden translate-y-1 dark:block"
+    [icon]="iconLight"
+    (click)="darkModeSwitchService.setDarkMode(false)"></fa-icon>
+  <span class="sr-only">Switch to light / dark version</span>
+</div>
