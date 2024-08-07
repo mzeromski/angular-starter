@@ -1,0 +1,28 @@
+<ul class="space-y-2 font-medium ml-{{ level * 4 }}">
+  <ng-container *ngFor="let page of pages">
+    <li>
+      <a
+        [routerLink]="['/starter/' + page.path]"
+        href="#"
+        class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+        <fa-icon [icon]="page.icon"></fa-icon>
+
+        <span class="ms-3 flex-1 whitespace-nowrap">{{ page.name }}</span>
+
+        <span
+          *ngIf="page.text"
+          class="ms-3 inline-flex items-center justify-center rounded-full bg-gray-100 px-2 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+          {{ page.text }}
+        </span>
+
+        <span
+          *ngIf="page.number"
+          class="ms-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-blue-100 p-3 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+          {{ page.number }}
+        </span>
+      </a>
+    </li>
+
+    <app-menu-items *ngIf="page.childs" [pages]="page.childs" [level]="level + 1"></app-menu-items>
+  </ng-container>
+</ul>
