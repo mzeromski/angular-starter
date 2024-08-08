@@ -8,7 +8,6 @@ import { DarkModeSwitchService } from './dark-mode-switch.service';
   standalone: true,
   imports: [FontAwesomeModule],
   templateUrl: './dark-mode-switch.component.html',
-  providers: [DarkModeSwitchService],
 })
 export class DarkModeSwitchComponent {
   public darkModeSwitchService: DarkModeSwitchService = inject(DarkModeSwitchService);
