@@ -19,6 +19,11 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/contact/contact.component').then(c => c.ContactComponent),
       },
+      {
+        path: StarterRoutesConfig.PAGES_CONFIG_FILES,
+        loadComponent: () =>
+          import('./pages/config-files/config-files.component').then(c => c.ConfigFilesComponent),
+      },
     ],
   },
 ];

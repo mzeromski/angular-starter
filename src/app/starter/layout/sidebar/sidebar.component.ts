@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  faCircle,
   faCoffee,
+  faCog,
   faDashboard,
-  faHandsBound,
   faSignIn,
   faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +22,9 @@ import { SidebarPage } from './sidebar-page';
 })
 export class SidebarComponent {
   public readonly pages: SidebarPage[] = [
-    { name: 'About', path: StarterRoutesConfig.PAGES_ABOUT, icon: faHandsBound, text: 'PRO' },
+    { name: 'About', path: StarterRoutesConfig.PAGES_ABOUT, icon: faCircle, text: 'PRO' },
+
+    { name: 'Config files', path: StarterRoutesConfig.PAGES_CONFIG_FILES, icon: faCog },
     {
       name: 'Index',
       path: StarterRoutesConfig.PAGES_INDEX,
