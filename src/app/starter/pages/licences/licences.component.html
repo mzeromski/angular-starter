@@ -1,2 +1,6 @@
-<h1>3d party licences</h1>
-<a href="/3rdpartylicenses.txt" target="_blank">3rdpartylicenses.txt</a>
+<p-card header="3d party licences">
+  <ng-template pTemplate="footer">
+    <p-button href="/3rdpartylicenses.txt" target="_blank">3rdpartylicenses.txt</p-button>
+  </ng-template>
+  <pre class="max-h-80 overflow-y-scroll text-xs">{{ licence }}</pre>
+</p-card>

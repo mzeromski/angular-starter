@@ -21,9 +21,12 @@ export class DarkModeSwitchService {
       (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       document.querySelector('html')!.classList.add('dark');
+      document.querySelector('body')!.classList.add('dark');
       this.darkMode = true;
     } else {
       document.querySelector('html')!.classList.remove('dark');
+      document.querySelector('body')!.classList.remove('dark');
+
       this.darkMode = false;
     }
   }
