@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-error-init',
   standalone: true,
-  imports: [ButtonModule],
+  imports: [ButtonModule, CardModule],
   templateUrl: './error-init.component.html',
 })
 export class ErrorInitComponent {
