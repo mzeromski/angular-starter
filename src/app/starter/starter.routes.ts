@@ -29,6 +29,21 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/licences/licences.component').then(c => c.LicencesComponent),
       },
+      {
+        path: StarterRoutesConfig.PAGES_ERROR_INIT,
+        loadComponent: () =>
+          import('./pages/error-init/error-init.component').then(c => c.ErrorInitComponent),
+      },
+      {
+        path: StarterRoutesConfig.PAGES_ERROR,
+        loadComponent: () => import('./pages/error/error.component').then(c => c.ErrorComponent),
+      },
+      {
+        path: '**',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./pages/notfound/notfound.component').then(c => c.NotfoundComponent),
+      },
     ],
   },
 ];

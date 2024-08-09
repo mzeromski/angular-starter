@@ -7,9 +7,12 @@ import {
   faCoffee,
   faCog,
   faDashboard,
+  faInfo,
   faLegal,
   faSignIn,
   faSignOut,
+  faStop,
+  faWarning,
 } from '@fortawesome/free-solid-svg-icons';
 import { StarterRoutesConfig } from '../../starter-routes.config';
 import { MenuItemsComponent } from '../menu-items/menu-items.component';
@@ -23,6 +26,8 @@ import { SidebarPage } from './sidebar-page';
 })
 export class SidebarComponent {
   public readonly pages: SidebarPage[] = [
+    { name: 'Starter', path: StarterRoutesConfig.PAGES_INDEX, icon: faInfo, text: 'PRO' },
+
     { name: 'About', path: StarterRoutesConfig.PAGES_ABOUT, icon: faCircle, text: 'PRO' },
 
     { name: 'Config files', path: StarterRoutesConfig.PAGES_CONFIG_FILES, icon: faCog },
@@ -36,6 +41,8 @@ export class SidebarComponent {
       ],
     },
     { name: 'Licences', path: StarterRoutesConfig.PAGES_LICENCES, icon: faLegal },
+    { name: 'Error init', path: StarterRoutesConfig.PAGES_ERROR_INIT, icon: faWarning },
+    { name: 'Not found page', path: 'notFound' + Math.random(), icon: faStop },
     { name: 'Sign in', path: StarterRoutesConfig.PAGES_ABOUT, icon: faSignIn },
     { name: 'Sign out', path: StarterRoutesConfig.PAGES_ABOUT, icon: faSignOut },
   ];
