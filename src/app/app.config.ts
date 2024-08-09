@@ -1,3 +1,4 @@
+import { provideHttpClient } from '@angular/common/http';
 import {
   APP_INITIALIZER,
   ApplicationConfig,
@@ -18,6 +19,7 @@ function initializeDarkModeTheme(): () => void {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
+    provideHttpClient(),
     provideRouter(routes),
     {
       provide: APP_INITIALIZER,
