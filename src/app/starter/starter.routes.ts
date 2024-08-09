@@ -24,6 +24,11 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/config-files/config-files.component').then(c => c.ConfigFilesComponent),
       },
+      {
+        path: StarterRoutesConfig.PAGES_LICENCES,
+        loadComponent: () =>
+          import('./pages/licences/licences.component').then(c => c.LicencesComponent),
+      },
     ],
   },
 ];

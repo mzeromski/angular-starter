@@ -7,6 +7,7 @@ import {
   faCoffee,
   faCog,
   faDashboard,
+  faLegal,
   faSignIn,
   faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
@@ -34,6 +35,7 @@ export class SidebarComponent {
         { name: 'About', path: StarterRoutesConfig.PAGES_ABOUT, icon: faCoffee },
       ],
     },
+    { name: 'Licences', path: StarterRoutesConfig.PAGES_LICENCES, icon: faLegal },
     { name: 'Sign in', path: StarterRoutesConfig.PAGES_ABOUT, icon: faSignIn },
     { name: 'Sign out', path: StarterRoutesConfig.PAGES_ABOUT, icon: faSignOut },
   ];
