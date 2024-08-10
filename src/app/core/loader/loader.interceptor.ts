@@ -1,6 +1,6 @@
-import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
+import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { catchError, finalize, of, tap } from 'rxjs';
+import { finalize, tap } from 'rxjs';
 import { LoaderService } from './loader.service';
 
 export const loaderInterceptor: HttpInterceptorFn = (req, next) => {
@@ -12,12 +12,6 @@ export const loaderInterceptor: HttpInterceptorFn = (req, next) => {
     }),
     finalize(() => {
       loaderService.hide();
-    }),
-    catchError(e => {
-      if (e instanceof HttpErrorResponse) {
-        loaderService.hide();
-      }
-      return of(e);
     })
   );
 };
