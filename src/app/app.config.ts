@@ -11,6 +11,8 @@ import { MessageService } from 'primeng/api';
 import { routes } from './app.routes';
 import { DarkModeSwitchService } from './core/dark-mode-switch/dark-mode-switch.service';
 import { errorHandlerInterceptor } from './core/error-handler/error-handler.interceptor';
+import { loaderInterceptor } from './core/loader/loader.interceptor';
+import { LoaderService } from './core/loader/loader.service';
 
 function initializeDarkModeTheme(): () => void {
   const darkModeSwitchService: DarkModeSwitchService = inject(DarkModeSwitchService);
@@ -22,9 +24,10 @@ function initializeDarkModeTheme(): () => void {
 export const appConfig: ApplicationConfig = {
   providers: [
     MessageService,
+    LoaderService,
     provideAnimationsAsync(),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideHttpClient(withInterceptors([errorHandlerInterceptor])),
+    provideHttpClient(withInterceptors([errorHandlerInterceptor, loaderInterceptor])),
     provideRouter(routes),
     {
       provide: APP_INITIALIZER,

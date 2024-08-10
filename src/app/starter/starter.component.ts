@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { ToastModule } from 'primeng/toast';
 import { DarkModeSwitchComponent } from '../core/dark-mode-switch/dark-mode-switch.component';
+import { LoaderComponent } from '../core/loader/loader.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
@@ -19,6 +20,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     DarkModeSwitchComponent,
     NavComponent,
     ToastModule,
+    LoaderComponent,
   ],
   templateUrl: './starter.component.html',
 })
