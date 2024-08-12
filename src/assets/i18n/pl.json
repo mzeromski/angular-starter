@@ -9,5 +9,11 @@
   "language-switch": {
     "en": "Angielski",
     "pl": "Polski"
+  },
+  "starter": {
+    "index": {
+      "header": "Starter module",
+      "hello": "Witaj :)"
+    }
   }
 }
