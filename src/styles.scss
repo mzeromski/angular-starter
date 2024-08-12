@@ -2,6 +2,12 @@
 @import '../node_modules/tailwindcss/components.css' layer(tailwindcss);
 @import '../node_modules/tailwindcss/utilities.css' layer(tailwindcss);
 
-@import './assets/primeng.theme.scss';
+@import '../node_modules/primeng/resources/themes/lara-light-blue/theme';
+
+.dark {
+  @import '../node_modules/primeng/resources/themes/lara-dark-blue/theme';
+}
 
 @import 'primeng/resources/primeng.css';
+
+@import '../node_modules/country-flag-icons/1x1/flags.css';

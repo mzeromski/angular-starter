@@ -1,4 +1,4 @@
-<ul class="space-y-2 font-medium ml-{{ level * 4 }}">
+<ul class="space-y-2 font-medium ml-{{ level * 4 }}" [class.mt-2]="level > 0">
   <ng-container *ngFor="let page of pages">
     <li>
       <a

@@ -1,0 +1,19 @@
+{
+  "about": {
+    "header": "About (en)"
+  },
+  "translate": {
+    "change": "Change",
+    "header": "Translate change demo"
+  },
+  "language-switch": {
+    "en": "English",
+    "pl": "Polish"
+  },
+  "starter": {
+    "index": {
+      "header": "Starter module",
+      "hello": "Hello :)"
+    }
+  }
+}

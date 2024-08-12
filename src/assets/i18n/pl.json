@@ -1,0 +1,19 @@
+{
+  "about": {
+    "header": "O systemie (pl)"
+  },
+  "translate": {
+    "change": "Zmień język",
+    "header": "Przykład zmiany języka"
+  },
+  "language-switch": {
+    "en": "Angielski",
+    "pl": "Polski"
+  },
+  "starter": {
+    "index": {
+      "header": "Starter module",
+      "hello": "Witaj :)"
+    }
+  }
+}

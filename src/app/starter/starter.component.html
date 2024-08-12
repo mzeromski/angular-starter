@@ -7,7 +7,7 @@
 </button>
 
 <div
-  *ngIf="sidebarOpen === true"
+  *ngIf="sidebarOpen"
   (click)="sidebarOpen = false"
   class="fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80"></div>
 
@@ -15,14 +15,14 @@
 
 <aside
   (click)="sidebarOpen = false"
-  [ngClass]="{ 'translate-x-0': sidebarOpen === true }"
+  [ngClass]="{ 'translate-x-0': sidebarOpen }"
   class="fixed left-0 top-16 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0"
   aria-label="Sidebar">
   <app-sidebar></app-sidebar>
 </aside>
 
-<div class="mt-20 p-4 sm:ml-64">
-  <router-outlet> </router-outlet>
+<div class="mt-16 p-4 sm:ml-64">
+  <router-outlet></router-outlet>
 </div>
 
 <p-toast position="bottom-right" />

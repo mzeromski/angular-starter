@@ -1,0 +1,29 @@
+<p-dropdown
+  [options]="languages"
+  optionLabel="label"
+  styleClass="w-30"
+  [(ngModel)]="currentLanguage"
+  (onChange)="changeLanguage()">
+  <ng-template pTemplate="selectedItem">
+    <div class="align-items-center flex content-center gap-2" *ngIf="currentLanguage">
+      <div class="flex content-center">
+        <span
+          class="flag flag:{{
+            currentLanguage['flag']!.toUpperCase()
+          }} mt-1 rounded-lg scale-150 mr-1"></span>
+      </div>
+
+      <div>{{ currentLanguage.label! | translate }}</div>
+    </div>
+  </ng-template>
+
+  <ng-template let-language pTemplate="item">
+    <div class="align-items-center flex gap-2">
+      <span
+        class="flag flag:{{
+          language['flag']!.toUpperCase()
+        }} mt-1 rounded-lg scale-150 mr-1"></span>
+      <div>{{ language.label | translate }}</div>
+    </div>
+  </ng-template>
+</p-dropdown>
