@@ -39,6 +39,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/error/error.component').then(c => c.ErrorComponent),
       },
       {
+        path: StarterRoutesConfig.PAGES_TRANSLATE,
+        loadComponent: () =>
+          import('./pages/translate/translate.component').then(c => c.TranslateComponent),
+      },
+      {
         path: '**',
         pathMatch: 'full',
         loadComponent: () =>

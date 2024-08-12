@@ -32,6 +32,8 @@
     "@angular/router": "^18.1.0",
     "@fortawesome/angular-fontawesome": "^0.15.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@ngx-translate/http-loader": "^8.0.0",
+    "country-flag-icons": "^1.5.13",
     "primeng": "^17.18.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

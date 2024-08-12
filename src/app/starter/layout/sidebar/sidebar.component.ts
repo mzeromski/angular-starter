@@ -8,6 +8,7 @@ import {
   faCog,
   faDashboard,
   faInfo,
+  faLanguage,
   faLegal,
   faSignIn,
   faSignOut,
@@ -39,16 +40,17 @@ export class SidebarComponent {
       childs: [
         {
           name: 'Submenu Page 1',
-          path: 'notExist',
+          path: 'notExist1',
           icon: faCoffee,
           number: 78,
         },
-        { name: 'Submenu page 2', path: 'notExist', icon: faStaffSnake },
+        { name: 'Submenu page 2', path: 'notExist2', icon: faStaffSnake },
       ],
     },
     { name: 'Licences', path: StarterRoutesConfig.PAGES_LICENCES, icon: faLegal },
     { name: 'Error init', path: StarterRoutesConfig.PAGES_ERROR_INIT, icon: faWarning },
     { name: 'Not found page', path: 'notFound' + Math.random(), icon: faStop },
+    { name: 'Translate change', path: StarterRoutesConfig.PAGES_TRANSLATE, icon: faLanguage },
     { name: 'Sign in', path: StarterRoutesConfig.PAGES_SIGN_IN, icon: faSignIn },
     { name: 'Sign out', path: StarterRoutesConfig.PAGES_SIGN_OUT, icon: faSignOut },
   ];

@@ -9,4 +9,5 @@ export enum StarterRoutesConfig {
   PAGES_ERROR_INIT = 'pages/error-init',
   PAGES_SIGN_IN = 'pages/sign-in',
   PAGES_SIGN_OUT = 'pages/sign-out',
+  PAGES_TRANSLATE = 'pages/translate',
 }
