@@ -1,1 +1,1 @@
-{ "*.ts": "eslint src", "src/**/*.{ts,css,html}": "prettier --check" }
+{ "*.ts": "eslint src", "src/**/*.{ts,css,html,scss}": "prettier . --write" }

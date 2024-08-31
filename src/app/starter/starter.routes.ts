@@ -44,6 +44,10 @@ export const routes: Routes = [
           import('./pages/translate/translate.component').then(c => c.TranslateComponent),
       },
       {
+        path: StarterRoutesConfig.PAGES_CACHE,
+        loadComponent: () => import('./pages/cache/cache.component').then(c => c.CacheComponent),
+      },
+      {
         path: '**',
         pathMatch: 'full',
         loadComponent: () =>

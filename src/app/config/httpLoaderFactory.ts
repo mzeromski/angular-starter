@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { TranslateLoader, TranslateService } from '@ngx-translate/core';

@@ -2,6 +2,10 @@
   "about": {
     "header": "About (en)"
   },
+  "cache": {
+    "header": "Cache",
+    "info": "Check dev console to see result"
+  },
   "translate": {
     "change": "Change",
     "header": "Translate change demo"

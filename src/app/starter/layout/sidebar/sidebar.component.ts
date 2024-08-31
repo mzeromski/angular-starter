@@ -10,6 +10,7 @@ import {
   faInfo,
   faLanguage,
   faLegal,
+  faSave,
   faSignIn,
   faSignOut,
   faStaffSnake,
@@ -33,6 +34,7 @@ export class SidebarComponent {
     { name: 'About', path: StarterRoutesConfig.PAGES_ABOUT, icon: faCircle, text: 'PRO' },
 
     { name: 'Config files', path: StarterRoutesConfig.PAGES_CONFIG_FILES, icon: faCog },
+    { name: 'Cache test', path: StarterRoutesConfig.PAGES_CACHE, icon: faSave },
     {
       name: 'Sub menu',
       path: 'notExist',
