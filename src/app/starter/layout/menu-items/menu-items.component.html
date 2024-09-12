@@ -3,10 +3,10 @@
     <li>
       <a
         [routerLink]="['/starter/' + page.path]"
-        routerLinkActive="bg-gray-900 text-white"
+        routerLinkActive=" dark:bg-surface-700 bg-surface-300 text-primary"
         [routerLinkActiveOptions]="{ exact: true }"
         href="#"
-        class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+        class="text-secondary group flex items-center rounded-lg p-2 hover:bg-surface-300 dark:hover:bg-surface-700">
         <fa-icon [icon]="page.icon"></fa-icon>
 
         <span class="ms-3 flex-1 whitespace-nowrap">{{ page.name }}</span>

@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Button } from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-translate',
   standalone: true,
-  imports: [CardModule, Button, TranslateModule],
+  imports: [CardModule, ButtonModule, TranslateModule],
   templateUrl: './translate.component.html',
 })
 export class TranslateComponent {
