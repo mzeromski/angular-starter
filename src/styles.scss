@@ -1,13 +1,11 @@
-@import '../node_modules/tailwindcss/base.css' layer(tailwindcss);
-@import '../node_modules/tailwindcss/components.css' layer(tailwindcss);
-@import '../node_modules/tailwindcss/utilities.css' layer(tailwindcss);
+@layer tailwind-base, primeng, tailwind-utilities;
 
-@import '../node_modules/primeng/resources/themes/lara-light-blue/theme';
-
-.dark {
-  @import '../node_modules/primeng/resources/themes/lara-dark-blue/theme';
+@layer tailwind-base {
+  @tailwind base;
 }
 
-@import 'primeng/resources/primeng.css';
-
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
 @import '../node_modules/country-flag-icons/1x1/flags.css';

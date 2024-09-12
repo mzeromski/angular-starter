@@ -1,0 +1,14 @@
+<div
+  (click)="op.toggle($event)"
+  class="flex size-8 cursor-pointer content-center justify-center rounded-full text-center text-black hover:bg-slate-500 dark:text-white">
+  <fa-icon class="translate-y-1" [icon]="faPalette"></fa-icon>
+</div>
+
+<p-popover #op [showCloseIcon]="true" appendTo="body">
+  <div class="flex w-32 flex-wrap gap-2">
+    <span
+      *ngFor="let mainColor of config"
+      class="inline bg-{{ mainColor }}-500 size-5 rounded-full cursor-pointer"
+      (click)="setMainColor(mainColor); op.toggle($event)"></span>
+  </div>
+</p-popover>

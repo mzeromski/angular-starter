@@ -3,7 +3,6 @@ import {
   APP_INITIALIZER,
   ApplicationConfig,
   importProvidersFrom,
-  inject,
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -12,17 +11,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MessageService } from 'primeng/api';
 import { routes } from './app.routes';
 import { initializeTranslation, provideTranslation } from './config/httpLoaderFactory';
+import { initializeDarkModeTheme } from './core/dark-mode-switch/dark-mode-switch.initializer';
 import { DarkModeSwitchService } from './core/dark-mode-switch/dark-mode-switch.service';
 import { errorHandlerInterceptor } from './core/error-handler/error-handler.interceptor';
 import { loaderInterceptor } from './core/loader/loader.interceptor';
 import { LoaderService } from './core/loader/loader.service';
-
-function initializeDarkModeTheme(): () => void {
-  const darkModeSwitchService: DarkModeSwitchService = inject(DarkModeSwitchService);
-  return () => {
-    darkModeSwitchService.initDarkMode();
-  };
-}
+import { initializeLayoutConfig } from './starter/layout/config/layout-config.initializer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -38,6 +32,11 @@ export const appConfig: ApplicationConfig = {
       useFactory: initializeDarkModeTheme,
       multi: true,
       deps: [DarkModeSwitchService],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeLayoutConfig,
+      multi: true,
     },
     {
       provide: APP_INITIALIZER,

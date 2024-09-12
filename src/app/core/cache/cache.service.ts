@@ -3,6 +3,10 @@ import { CacheItem } from './cache-item';
 export class CacheService {
   static readonly prefix: string = 'ANGULAR_';
 
+  static setCacheForever(key: string, data: object): void {
+    CacheService.setCache(key, data, Number.MAX_SAFE_INTEGER);
+  }
+
   static setCache(key: string, data: object, live: number): void {
     live = live * 1000;
     const cacheItem: CacheItem = new CacheItem(

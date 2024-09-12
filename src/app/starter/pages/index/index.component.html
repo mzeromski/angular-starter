@@ -24,3 +24,13 @@
 <p-card header="Slugify" styleClass="mt-5">
   <p>{{ 'Some Text With Special Chars, ÓĄŚŁŻŹĄ' | slugify }}</p>
 </p-card>
+
+<p-card header="Colors" styleClass="mt-5">
+  <div class="flex flex-col gap-5">
+    <p
+      *ngFor="let colorNumber of [100, 200, 300, 400, 500, 600, 700, 800, 900]"
+      class="bg-primary-{{ colorNumber }}">
+      Primary {{ colorNumber }}
+    </p>
+  </div>
+</p-card>
