@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { definePreset } from 'primeng/themes';
-import { Aura } from 'primeng/themes/aura';
+import { Nora } from 'primeng/themes/nora';
 import { CacheService } from '../../../core/cache/cache.service';
 
 export interface LayoutConfigCacheItem {
@@ -25,7 +25,7 @@ export class LayoutConfigService {
   }
 
   public initMainColor(mainColor: string): void {
-    const preset: typeof Aura = definePreset(Aura, {
+    const preset: typeof Nora = definePreset(Nora, {
       semantic: {
         primary: {
           50: '{' + mainColor + '.50}',
