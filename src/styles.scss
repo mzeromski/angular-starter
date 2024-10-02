@@ -9,3 +9,7 @@
   @tailwind utilities;
 }
 @import '../node_modules/country-flag-icons/1x1/flags.css';
+
+.bg-content-background {
+  background-color: var(--p-content-background);
+}
