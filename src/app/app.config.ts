@@ -16,6 +16,8 @@ import { DarkModeSwitchService } from './core/dark-mode-switch/dark-mode-switch.
 import { errorHandlerInterceptor } from './core/error-handler/error-handler.interceptor';
 import { loaderInterceptor } from './core/loader/loader.interceptor';
 import { LoaderService } from './core/loader/loader.service';
+import { initializeState } from './core/simple-state/state.initializer';
+import { StateService } from './core/simple-state/state.service';
 import { initializeLayoutConfig } from './starter/layout/config/layout-config.initializer';
 
 export const appConfig: ApplicationConfig = {
@@ -23,6 +25,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([TranslateModule.forRoot(provideTranslation())]),
     MessageService,
     LoaderService,
+    StateService,
     provideAnimationsAsync(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(withInterceptors([errorHandlerInterceptor, loaderInterceptor])),
@@ -43,6 +46,12 @@ export const appConfig: ApplicationConfig = {
       useFactory: initializeTranslation,
       multi: true,
       deps: [TranslateService],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeState,
+      multi: true,
+      deps: [StateService],
     },
   ],
 };

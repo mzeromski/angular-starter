@@ -34,3 +34,17 @@
     </p>
   </div>
 </p-card>
+<p-card header="HMR demo" styleClass="mt-5">
+  <p-button (click)="dialogVisible = true" label="Show dialog"> </p-button>
+  <br /><br />
+  <p-button (click)="openDialog()" label="Show dialog with state cache"> </p-button>
+</p-card>
+
+<p-dialog [(visible)]="dialogVisible">Dialog content ascas</p-dialog>
+
+<p-dialog
+  [visible]="(stateService.state | async)?.openDialog!"
+  (visibleChange)="closeDialog()"
+  [modal]="true"
+  >Dialog content
+</p-dialog>

@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 import { DropdownModule } from 'primeng/dropdown';
+import { Select } from 'primeng/select';
 import { LanguageSwitchService } from './language-switch.service';
 
 @Component({
   selector: 'app-language-switch',
   standalone: true,
-  imports: [DropdownModule, FormsModule, TranslateModule, JsonPipe, NgIf],
+  imports: [DropdownModule, FormsModule, TranslateModule, JsonPipe, NgIf, Select],
   templateUrl: './language-switch.component.html',
 })
 export class LanguageSwitchComponent {
