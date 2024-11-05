@@ -11,4 +11,5 @@ export enum StarterRoutesConfig {
   PAGES_SIGN_OUT = 'pages/sign-out',
   PAGES_TRANSLATE = 'pages/translate',
   PAGES_CACHE = 'pages/cache',
+  PAGES_DEFER = 'pages/defer',
 }

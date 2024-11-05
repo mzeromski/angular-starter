@@ -48,6 +48,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/cache/cache.component').then(c => c.CacheComponent),
       },
       {
+        path: StarterRoutesConfig.PAGES_DEFER,
+        loadComponent: () => import('./pages/defer/defer.component').then(c => c.DeferComponent),
+      },
+      {
         path: '**',
         pathMatch: 'full',
         loadComponent: () =>

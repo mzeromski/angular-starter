@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, debounceTime, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class LoaderService {
   private _status: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  public status: Observable<boolean> = this._status.asObservable();
+  public status: Observable<boolean> = this._status.asObservable().pipe(debounceTime(200));
 
   show(): void {
     this._status.next(true);

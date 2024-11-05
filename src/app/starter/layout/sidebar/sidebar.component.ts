@@ -11,10 +11,9 @@ import {
   faLanguage,
   faLegal,
   faSave,
-  faSignIn,
-  faSignOut,
   faStaffSnake,
   faStop,
+  faTimeline,
   faWarning,
 } from '@fortawesome/free-solid-svg-icons';
 import { StarterRoutesConfig } from '../../starter-routes.config';
@@ -35,6 +34,7 @@ export class SidebarComponent {
 
     { name: 'Config files', path: StarterRoutesConfig.PAGES_CONFIG_FILES, icon: faCog },
     { name: 'Cache test', path: StarterRoutesConfig.PAGES_CACHE, icon: faSave },
+    { name: 'Defer test', path: StarterRoutesConfig.PAGES_DEFER, icon: faTimeline },
     {
       name: 'Sub menu',
       path: 'notExist',
@@ -53,7 +53,5 @@ export class SidebarComponent {
     { name: 'Error init', path: StarterRoutesConfig.PAGES_ERROR_INIT, icon: faWarning },
     { name: 'Not found page', path: 'notFound' + Math.random(), icon: faStop },
     { name: 'Translate change', path: StarterRoutesConfig.PAGES_TRANSLATE, icon: faLanguage },
-    { name: 'Sign in', path: StarterRoutesConfig.PAGES_SIGN_IN, icon: faSignIn },
-    { name: 'Sign out', path: StarterRoutesConfig.PAGES_SIGN_OUT, icon: faSignOut },
   ];
 }
