@@ -1,7 +1,7 @@
 <button
   type="button"
   (click)="sidebarOpen = true"
-  class="fixed top-1 z-10 ms-3 mt-2 inline-flex h-10 w-10 items-center rounded-lg text-center text-xl text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 sm:hidden">
+  class="fixed top-1 z-10 ms-3 mt-2 inline-flex h-10 w-10 items-center rounded-lg text-center text-xl hover:bg-emphasis focus:outline-none focus:ring-2 focus:ring-gray-200 sm:hidden">
   <span class="sr-only">Open sidebar</span>
   <fa-icon [icon]="sidebarOpenIcon" class="mx-auto"></fa-icon>
 </button>
@@ -9,13 +9,13 @@
 <div
   *ngIf="sidebarOpen"
   (click)="sidebarOpen = false"
-  class="fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80"></div>
+  class="fixed inset-0 z-30 bg-gray-900/50"></div>
 
 <app-nav></app-nav>
 
 <aside
   (click)="sidebarOpen = false"
-  [ngClass]="{ 'translate-x-0': sidebarOpen }"
+  [ngClass]="{ '!top-0 translate-x-0': sidebarOpen }"
   class="fixed left-0 top-16 z-40 h-screen w-64 -translate-x-full transition-transform sm:translate-x-0"
   aria-label="Sidebar">
   <app-sidebar></app-sidebar>

@@ -1,23 +1,23 @@
 <nav
   class="bg-content-background fixed top-0 flex h-16 w-full items-center justify-between bg-gray-50 pl-16 sm:pl-4">
   <div class="flex flex-auto items-center justify-between sm:items-stretch sm:justify-start">
-    <div class="flex flex-shrink-0 items-center text-black dark:text-white">
+    <div class="flex flex-shrink-0 items-center text-xl">
       <a [routerLink]="['/starter']" routerLinkActive="router-link-active"> Angular Starter </a>
     </div>
     <div class="hidden sm:ml-6 sm:block">
       <div class="flex space-x-4">
         <a
           [routerLink]="['/starter']"
-          routerLinkActive="bg-gray-900 text-white"
+          routerLinkActive="bg-emphasis"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white dark:text-gray-300"
+          class="rounded-md px-3 py-2 text-sm font-medium hover:bg-emphasis"
           aria-current="page"
           >Dashboard</a
         >
         <a
           href="https://learn.angular-starter.com/"
           target="_blank"
-          class="dark:text-white-300 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white dark:text-gray-300">
+          class="rounded-md px-3 py-2 text-sm font-medium hover:bg-emphasis">
           Learn (docs)
         </a>
       </div>
