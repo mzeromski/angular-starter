@@ -1,4 +1,4 @@
-<p-dropdown
+<p-select
   [options]="languages"
   optionLabel="label"
   styleClass="w-30"
@@ -12,7 +12,6 @@
             currentLanguage['flag']!.toUpperCase()
           }} mt-1 rounded-lg scale-150 mr-1"></span>
       </div>
-
       <div>{{ currentLanguage.label! | translate }}</div>
     </div>
   </ng-template>
@@ -26,4 +25,4 @@
       <div>{{ language.label | translate }}</div>
     </div>
   </ng-template>
-</p-dropdown>
+</p-select>

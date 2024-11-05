@@ -19,7 +19,7 @@ module.exports = tseslint.config(
     rules: {
       'prettier/prettier': ['error'],
       '@typescript-eslint/no-non-null-assertion': 'off',
-
+      '@typescript-eslint/consistent-generic-constructors': 'off',
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/prefer-as-const': 'error',
       '@typescript-eslint/typedef': [
