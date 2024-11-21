@@ -1,3 +1,57 @@
 <p-card>
   <p>{{ 'about.header' | translate }}</p>
+
+  <ul>
+    @for (who of authors(); track who) {
+      @if (who === mainAuthor) {
+        <li>
+          <strong>{{ who }}</strong>
+        </li>
+      } @else {
+        <li>{{ who }}</li>
+      }
+    } @empty {
+      <li>No list</li>
+    }
+  </ul>
+
+  <p-divider></p-divider>
+
+  <ul>
+    @for (who of authors(); track who) {
+      @switch (who) {
+        @case (mainAuthor) {
+          <li>Main: {{ who }}</li>
+        }
+        @case (secondAuthor) {
+          <li>Second: {{ who }}</li>
+        }
+        @default {
+          <li>{{ who }}</li>
+        }
+      }
+    } @empty {
+      <li>No list</li>
+    }
+  </ul>
+
+  <p-divider></p-divider>
+
+  <ul>
+    @for (
+      who of authors();
+      track who;
+      let idx = $index, e = $even,o = $odd, first = $first, last = $last, count=$count
+    ) {
+      <li class="grid auto-cols-max grid-flow-col gap-2">
+        <div>index: {{ idx }}</div>
+        <div>even: {{ e }}</div>
+        <div>odd: {{ o }}</div>
+        <div>first: {{ first }}</div>
+        <div>last: {{ last }}</div>
+        <div>count: {{ count }}</div>
+        <div>{{ who }}</div>
+      </li>
+    }
+  </ul>
 </p-card>
